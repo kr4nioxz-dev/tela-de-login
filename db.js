@@ -1,16 +1,4 @@
 // db.js — Camada de acesso a dados (a "base de dados" do projeto)
-//
-// DECISÃO DE ARQUITETURA: por que um arquivo JSON e não SQLite/Postgres?
-// Tentei usar SQLite primeiro, mas o driver mais comum (better-sqlite3) precisa
-// compilar código nativo na instalação — isso falha em redes restritas e exige
-// ferramentas de build na máquina de quem for rodar o projeto. Para uma tela de
-// login simples, isso é fragilidade desnecessária. Um arquivo JSON lido/escrito
-// pelo módulo "fs" (nativo do Node, zero instalação) resolve o mesmo problema
-// com muito menos risco.
-//
-// Se o projeto crescer e precisar de um banco de verdade, só este arquivo
-// precisa mudar: server.js só conhece "createUser" e "findUserByEmail".
-
 const fs = require('fs');
 const path = require('path');
 
