@@ -24,7 +24,6 @@ npm start
 ```
 
 E depois, acessando **http://localhost:3000** no navegador.
-OBS.: Só funciona na minha máquina.
 
 ## Estrutura
 
@@ -50,3 +49,12 @@ tela-login/
 | `/api/login`     | POST   | `{ email, password }` → autentica e cria a sessão    |
 | `/api/me`        | GET    | Retorna os dados de quem está logado (401 se não)    |
 | `/api/logout`    | POST   | Encerra a sessão atual                               |
+=======
+| Rota             | Método | Corpo (JSON)                                |
+|------------------|--------|---------------------------------------------|
+| `/api/register`  | POST   | `{ name, email, password }`                 |
+| `/api/login`     | POST   | `{ email, password }`                       |
+
+## Observações Importantes
+
+O site, atualmente, roda apenas na minha máquina. Este repositório foi criado para fins educativos.
